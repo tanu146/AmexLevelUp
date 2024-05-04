@@ -1,3 +1,4 @@
+import 'package:amex_levelup/Screens/HomeScreen.dart';
 import 'package:amex_levelup/Widgets/container_glass.dart';
 import 'package:amex_levelup/Widgets/customtextfield.dart';
 import 'package:animated_notch_bottom_bar/animated_notch_bottom_bar/animated_notch_bottom_bar.dart';
@@ -67,45 +68,53 @@ class _SignInState extends State<SignIn> {
                     SizedBox(height: 20),
                     CustomTextField(labelText: 'Password', hintText: 'Enter password',),
                     SizedBox(height: 40,),
-                    Center(
-                      child: Container(
-                        decoration: BoxDecoration(
-        color: Color(0xFF19173D), // Fixed color
-        borderRadius: BorderRadius.circular(40),
-        border: Border.all(
-          color: Color.fromARGB(255, 25, 89, 130), // Fixed border color
-          width: 3,
-        ), // Add border radius if needed
-      ),
-                            width: 200,
-                            height: 80,
-                            child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: [
-                                    Text(
-                                      'Create an account?',
-                                      style: TextStyle(
-                                        color: Colors.white.withOpacity(0.87),
-                                        fontSize: 17,
-                                        fontFamily: 'Poppins',
-                                        fontWeight: FontWeight.w500,
-                                        letterSpacing: 0.02,
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) => MyHomePage(title:"")),
+                            );
+                      },
+                      child: Center(
+                        child: Container(
+                          decoration: BoxDecoration(
+                              color: Color(0xFF19173D), // Fixed color
+                              borderRadius: BorderRadius.circular(40),
+                              border: Border.all(
+                                color: Color.fromARGB(255, 25, 89, 130), // Fixed border color
+                                width: 3,
+                              ), // Add border radius if needed
+                            ),
+                              width: 200,
+                              height: 80,
+                              child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                    children: [
+                                      Text(
+                                        'Create an account?',
+                                        style: TextStyle(
+                                          color: Colors.white.withOpacity(0.87),
+                                          fontSize: 17,
+                                          fontFamily: 'Poppins',
+                                          fontWeight: FontWeight.w500,
+                                          letterSpacing: 0.02,
+                                        ),
                                       ),
-                                    ),
-                                    Text(
-                                      'SIGN UP NOW!',
-                                      style: TextStyle(
-                                        color: Color(0xFF7B78AA),
-                                        fontSize: 15,
-                                        fontFamily: 'Poppins',
-                                        fontWeight: FontWeight.w400,
-                                        letterSpacing: 0.02,
+                                      Text(
+                                        'SIGN UP NOW!',
+                                        style: TextStyle(
+                                          color: Color(0xFF7B78AA),
+                                          fontSize: 15,
+                                          fontFamily: 'Poppins',
+                                          fontWeight: FontWeight.w400,
+                                          letterSpacing: 0.02,
+                                        ),
                                       ),
-                                    ),
-                                  ],
-                                ),
-                          ),
+                                    ],
+                                  ),
+                            ),
+                      ),
                     )
                   ],
                 )),
