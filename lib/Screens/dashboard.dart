@@ -1,8 +1,10 @@
+import 'package:amex_levelup/Screens/chatbot.dart';
 import 'package:amex_levelup/Screens/moduleScreen.dart';
 import 'package:amex_levelup/Widgets/container_glass.dart';
 import 'package:amex_levelup/Widgets/customwidget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class Dashboard extends StatelessWidget {
   const Dashboard({super.key});
@@ -105,7 +107,14 @@ class Dashboard extends StatelessWidget {
                       const SizedBox(height: 20,),
                       const CustomWidget(title: 'Redeem your points'),
                       const SizedBox(height: 20,),
-                      const CustomWidget(title: 'Chatbot')
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) => const Chatbot()),
+                            );
+                        },
+                        child: const CustomWidget(title: 'Chatbot'))
                     ],
                   )),
           

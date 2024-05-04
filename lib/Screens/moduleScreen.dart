@@ -73,31 +73,32 @@ class ModuleScreen extends StatelessWidget {
           child: const Padding(
             padding: EdgeInsets.symmetric(horizontal: 20, vertical: 30),
             child: GlassContainer(
-                                                      child: Column(
-                                                    children: [
-                                                      Text(
-                                            'Different Modules',
-                                            style: TextStyle(
-                                              color: Colors.white,
-                                              fontSize: 22,
-                                              fontFamily: 'DM Sans',
-                                              fontWeight: FontWeight.w700,
-                                              height: 0.06,
-                                              letterSpacing: 0.80,
-                                            ),
-                                          ),
-                                          SizedBox(height: 20,),
-                                                      ImageGridView(
-                                        imageNames: [
-                                          'Card Stock01.png',
-                                          'Card Stock02.png',
-                                          'Card Stock03.png',
-                                          'Card Stock04.png',
-                                          // Add more asset image names as needed
-                                        ],
-                                      ),
-                                                    ],
-                                                  )),),
+              child: Column(
+                children: [
+                  Text(
+                    'Different Modules',
+                    style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 22,
+                    fontFamily: 'DM Sans',
+                    fontWeight: FontWeight.w700,
+                    height: 0.06,
+                    letterSpacing: 0.80,
+                  ),),
+                  SizedBox(height: 20,),
+                  Expanded(
+                    child: ImageGridView(
+                      imageNames: [
+                        'Card Stock01.png',
+                        'Card Stock02.png',
+                        'Card Stock03.png',
+                        'Card Stock04.png',
+                        // Add more asset image names as needed
+                      ],
+                    ),
+                  ),
+                ],
+              )),),
         ),
       
     );

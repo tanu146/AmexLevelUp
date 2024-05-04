@@ -1,4 +1,5 @@
 import 'package:amex_levelup/Screens/dashboard.dart';
+import 'package:amex_levelup/Screens/leaderboard.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -36,7 +37,8 @@ class _MyHomePageState extends State<MyHomePage> {
   int _selectedIndex = 0;
 
   static  final List<Widget> _pages = <Widget>[
-    const Dashboard()
+    const Dashboard(),
+    const Leaderboard()
     // Define your pages/screens here
   ];
 

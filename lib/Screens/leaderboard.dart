@@ -1,6 +1,5 @@
-import 'package:amex_levelup/Screens/moduleScreen.dart';
 import 'package:amex_levelup/Widgets/container_glass.dart';
-import 'package:amex_levelup/Widgets/customwidget.dart';
+import 'package:amex_levelup/Widgets/tablerow.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -74,44 +73,14 @@ class Leaderboard extends StatelessWidget {
             ),
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 30),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Container(
-                            width: 200,
-                            height: 200,
-                            decoration: const BoxDecoration(
-          shape: BoxShape.circle,
-          image: DecorationImage(
-            image: AssetImage('assets/Balance.png'), // Replace 'your_image.png' with your image asset path
-            fit: BoxFit.cover,
-          ),
-            ),
-                          ),
-                          const SizedBox(height: 20,),
-                          GlassContainer(
-                      child: Column(
-                    children: [
-                      const CustomWidget(title: 'Check your financial literacy'),
-                      const SizedBox(height: 20,),
-                      GestureDetector(
-                        onTap: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(builder: (context) => const ModuleScreen()),
-                            );
-                        },
-                        child: const CustomWidget(title: 'Learning Modules')),
-                      const SizedBox(height: 20,),
-                      const CustomWidget(title: 'Redeem your points'),
-                      const SizedBox(height: 20,),
-                      const CustomWidget(title: 'Chatbot')
-                    ],
-                  )),
-          
-          
-            
-          ],),
+          child: GlassContainer(
+                      child: ListView.builder(
+              shrinkWrap: true,
+              itemCount: 5, // Number of items in the list
+              itemBuilder: (BuildContext context, int index) {
+                return Tablerow(); // Use Tablerow widget for each item
+              },
+            ),),
         ),
       ),
     ),
