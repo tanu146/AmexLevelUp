@@ -11,7 +11,10 @@ Our project is a financial literacy app designed to provide users with interacti
 ## Features (In Progress)
 
 Personalized avatar for personalized guidance.
+
 Interactive learning modules covering various financial topics.
+
 Notification engagement to keep users informed.
+
 Gamification elements including practice playground and storylines for young age group.
 
